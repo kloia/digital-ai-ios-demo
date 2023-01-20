@@ -96,34 +96,34 @@ This project includes ios test automation codes of device farm integration of <a
 # Project Folder Structure
 
 ```
-├── Gemfile                                    # Management of the libraries to be used in the project
+.
+├── Gemfile                                                # Management of the libraries to be used in the project
 ├── README.md
 ├── apps
-│   └── com.ebay.mobile_6.87.0.1-6087001.apk    
-├── config                                      # Configurations of the project
+│   └── com.experitest.ExperiBank_1.0-6117.ipa
+├── config                                                 # Configurations of the project
 │   ├── base
 │   │   └── base_config.rb
-│   ├── device                            # Device configurations of the project
+│   ├── device                                       # Device configurations of the project
 │   │   └── device_config.yml
-│   └── digitalai                         # Device farm configurations of the project
+│   └── digitalai                                    # Device farm configurations of the project
 │       ├── digitalai_config.rb
 │       └── digitalai_config.yml
-├── cucumber.yml                                # Run configurations
+├── cucumber.yml                                           # Run configurations
 ├── features
 │   ├── pages
-│   │   ├── home_page.rb
-│   │   ├── product_page.rb
-│   │   └── setting_page.rb
+│   │   └── login
+│   │       └── login_page.rb
+│   ├── resources
+│   │   └── credentials.rb
 │   ├── step_definitions
-│   │   ├── home_page_steps.rb
-│   │   ├── product_steps.rb
-│   │   └── setting_steps.rb
+│   │   └── login
+│   │       └── login_steps.rb
 │   ├── support
 │   │   ├── env.rb
-│   │   └── hooks.rb 
-│   └── tests                               # Directory of scenarios in #Gherkin Synxtax
-│       └── search_demo.feature              
-├── output
+│   │   └── hooks.rb
+│   └── tests
+│       └── login.feature                             # Directory of scenarios in #Gherkin Synxtax
 └── util
     ├── api_util.rb
     ├── digital_ai_api_util.rb
