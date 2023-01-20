@@ -104,9 +104,9 @@ This project includes ios test automation codes of device farm integration of <a
 ├── config                                                 # Configurations of the project
 │   ├── base
 │   │   └── base_config.rb
-│   ├── device                                       # Device configurations of the project
+│   ├── device                                             # Device configurations of the project
 │   │   └── device_config.yml
-│   └── digitalai                                    # Device farm configurations of the project
+│   └── digitalai                                          # Device farm configurations of the project
 │       ├── digitalai_config.rb
 │       └── digitalai_config.yml
 ├── cucumber.yml                                           # Run configurations
@@ -123,7 +123,7 @@ This project includes ios test automation codes of device farm integration of <a
 │   │   ├── env.rb
 │   │   └── hooks.rb
 │   └── tests
-│       └── login.feature                             # Directory of scenarios in #Gherkin Synxtax
+│       └── login.feature                                  # Directory of scenarios in #Gherkin Synxtax
 └── util
     ├── api_util.rb
     ├── digital_ai_api_util.rb
