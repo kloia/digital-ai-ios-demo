@@ -1,6 +1,6 @@
 # <a href="https://digital.ai/products/continuous-testing/">digital.ai</a> iOS Test Automation Demo
 
-This project includes android test automation codes of device farm integration of <a href="https://digital.ai/products/continuous-testing/">digital.ai</a>  continuous testing platform.
+This project includes ios test automation codes of device farm integration of <a href="https://digital.ai/products/continuous-testing/">digital.ai</a>  continuous testing platform.
 
 # Tool stack
 
@@ -36,6 +36,11 @@ This project includes android test automation codes of device farm integration o
    npm install -g appium
    ```
 
+* If you run local, device ideviceinstaller must be installed.
+   ```
+   You can install it by running the following command from CMD.
+   brew install ideviceinstaller
+   ```
 
 * The following commands are run in the project directory to install the necessary libraries.
   ```

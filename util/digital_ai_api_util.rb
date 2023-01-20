@@ -15,7 +15,7 @@ class DigitalaiApiUtil
     header =
       { 'Content-Type' => 'application/json', 'Connection' => 'Keep-Alive', 'Authorization' => @auth }
     query = {
-      'osType' => "android",
+      'osType' => "ios",
       'releaseVersion' => BaseConfig.release_version,
       'buildVersion' => BaseConfig.build_version,
       'packageName' => "#{BaseConfig.app_name}",
@@ -37,7 +37,7 @@ class DigitalaiApiUtil
 
   def self.upload_ipa_to_digital_ai
     check_ipa = DigitalaiApiUtil.checkUploadIpa
-    puts "Check ipa status => #{check_ipa}"
+    Loggers.log_info "Check ipa status => #{check_ipa}"
     if check_ipa.empty?
       response = DigitalaiApiUtil.upload_ipa(File.open("apps/#{BaseConfig.app_name}_#{BaseConfig.release_version}-#{BaseConfig.build_version}.ipa"))
       if response["status"] != "SUCCESS"
