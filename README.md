@@ -9,7 +9,7 @@ This project includes ios test automation codes of device farm integration of <a
 * **Allure** Multi-language test report tool
 * **Cucumber** - Gherkin Syntax Framework
 * **RSpec** - Assertion & Validation Framework
-* **Appium** - Mobile APP Test Automation Tool
+* **Appium** - Mobile Test Automation Tool
 * **<a href="https://digital.ai/products/continuous-testing/">digital.ai continuous testing</a>** - Device Farm
 
 # Topic
@@ -63,9 +63,13 @@ This project includes ios test automation codes of device farm integration of <a
 
 1. It can be run based on scenario or feature with the green RUN button on the IDE.
 
-3. Run from terminal with scenario or feature tag in project directory:
+2. Run from terminal with scenario or feature tag in project directory:
    
    `cucumber --tag @login`
+
+3. Run parallel from terminal with scenario or feature tag in project directory:
+   
+   `ruby cucumber_parallel_run.rb "login"`
 
 
 # Reporting
