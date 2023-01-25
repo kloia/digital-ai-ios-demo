@@ -11,7 +11,7 @@ class DigitalaiApiUtil
     response["keyValuePairs"]["reportUrl"]
   end
 
-  def self.checkUploadIpa
+  def self.check_upload_ipa
     header =
       { 'Content-Type' => 'application/json', 'Connection' => 'Keep-Alive', 'Authorization' => @auth }
     query = {
@@ -36,7 +36,7 @@ class DigitalaiApiUtil
   end
 
   def self.upload_ipa_to_digital_ai
-    check_ipa = DigitalaiApiUtil.checkUploadIpa
+    check_ipa = DigitalaiApiUtil.check_upload_ipa
     Loggers.log_info "Check ipa status => #{check_ipa}"
     if check_ipa.empty?
       response = DigitalaiApiUtil.upload_ipa(File.open("apps/#{BaseConfig.app_name}_#{BaseConfig.release_version}-#{BaseConfig.build_version}.ipa"))
