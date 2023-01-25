@@ -1,7 +1,7 @@
 :caps:
   testName: 'Demo iOS Automation'
   accessKey: ""
-  deviceQuery: "@os='ios' and @category='PHONE'"
+  deviceQuery: "@os='ios' and @version='14.5' and @category='PHONE'"
   app: "cloud:com.experitest.ExperiBank"
   platformName: "iOS"
   bundleId: "com.experitest.ExperiBank"

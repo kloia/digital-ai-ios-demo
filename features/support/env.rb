@@ -30,7 +30,7 @@ when 'simulator'
   $CAPS[:caps][:bundleId] = BaseConfig.bundle_id
 else
   DigitalaiApiUtil.upload_ipa_to_digital_ai
-  $CAPS = YAML.load_file(File.expand_path("./config/digitalai/digitalai_config.yml"))
+  $CAPS = YAML.load_file(File.expand_path("./config/digitalai/#{BaseConfig.caps_name}.yml"))
   $CAPS[:caps]['release_version'] = BaseConfig.release_version
   $CAPS[:caps]['accessKey'] = DigitalaiConfig.digital_ai_access_key
   $CAPS[:appium_lib]['server_url'] = "#{DigitalaiConfig.digital_ai_url}/wd/hub"

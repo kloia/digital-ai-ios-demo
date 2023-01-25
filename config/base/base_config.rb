@@ -37,4 +37,9 @@ module BaseConfig
   def self.app_name
     @app_name
   end
+
+  @caps_name = ENV['caps_name'] || 'V14_5_caps'
+  def self.caps_name
+    @caps_name
+  end
 end

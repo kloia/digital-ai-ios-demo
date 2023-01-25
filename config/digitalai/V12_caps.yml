@@ -1,0 +1,22 @@
+:caps:
+  testName: 'Demo iOS Automation'
+  accessKey: ""
+  deviceQuery: "@os='ios' and @version='12.0' and @category='PHONE'"
+  app: "cloud:com.experitest.ExperiBank"
+  platformName: "iOS"
+  bundleId: "com.experitest.ExperiBank"
+  releaseVersion: ""
+  noReset: true
+  fullReset: false
+  automationName: "XCUITest"
+  autoWebView: true
+  setWebContentsDebuggingEnabled: true
+  autoAcceptAlerts: true
+  locationServicesEnabled: true
+  autoGrantPermissions: true
+  newCommandTimeout: 800
+  appiumVersion: 1.22.2
+
+:appium_lib:
+  server_url: ""
+
