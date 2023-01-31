@@ -5,6 +5,7 @@
   app: "cloud:com.experitest.ExperiBank"
   platformName: "iOS"
   bundleId: "com.experitest.ExperiBank"
+  instrumentApp: true
   releaseVersion: ""
   noReset: true
   fullReset: false

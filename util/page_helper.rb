@@ -169,6 +169,10 @@ module PageHelper
     @is_element
   end
 
+  def self.simulate_capture(file_url)
+    driver.execute_script("seetest:client.simulateCapture('#{file_url}')")
+  end
+
 end
 
 World(PageHelper)
