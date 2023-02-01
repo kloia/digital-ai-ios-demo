@@ -20,6 +20,8 @@ This project includes ios test automation codes of device farm integration of <a
 
 * Linking the video records to the report
 
+* Simulate capture feature is injects an image file to the camera preview screen. <a href="https://docs.experitest.com/display/TE/SeeTest+Client+-+SimulateCapture"> Documentation </a>
+
 # Installation
 
 * Ruby must be installed. <a href="https://www.ruby-lang.org/en/downloads/">Link to install</a>
