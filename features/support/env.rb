@@ -21,18 +21,19 @@ when 'local'
   $CAPS[:caps][:udid] = `idevice_id -l`.strip
   $CAPS[:caps][:deviceName] = `idevicename`.strip
   $CAPS[:caps][:platformVersion] = `ideviceinfo -u $(idevice_id) | grep ProductVersion`.strip.split(" ")[1]
-  $CAPS[:caps][:bundleId] = BaseConfig.bundle_id
+  $CAPS[:caps][:bundleId] = BaseConfig.app_name
 when 'simulator'
   $CAPS = YAML.load_file(File.expand_path("./config/device/device_config.yml"))
   $CAPS[:caps][:udid] = `xcrun simctl getenv booted  SIMULATOR_UDID`.strip
   $CAPS[:caps][:deviceName] = `xcrun simctl getenv booted  SIMULATOR_DEVICE_NAME`.strip
   $CAPS[:caps][:platformVersion] = `xcrun simctl getenv booted  SIMULATOR_RUNTIME_VERSION`.strip
-  $CAPS[:caps][:bundleId] = BaseConfig.bundle_id
+  $CAPS[:caps][:bundleId] = BaseConfig.app_name
 else
   DigitalaiApiUtil.upload_ipa_to_digital_ai
   $CAPS = YAML.load_file(File.expand_path("./config/digitalai/#{BaseConfig.caps_name}.yml"))
   $CAPS[:caps]['release_version'] = BaseConfig.release_version
   $CAPS[:caps]['accessKey'] = DigitalaiConfig.digital_ai_access_key
+  $CAPS[:caps][:bundleId] = BaseConfig.app_name
   $CAPS[:appium_lib]['server_url'] = "#{DigitalaiConfig.digital_ai_url}/wd/hub"
 end
 

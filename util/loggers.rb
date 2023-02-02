@@ -34,4 +34,15 @@ module Loggers
     Allure.add_attachment(name: 'Screenshot', source: screenshot(screenshot_name.to_s), type: Allure::ContentType::PNG,
                           test_case: true)
   end
+
+  def self.take_video_recording(file_name)
+    if BaseConfig.video_recording
+      recording_path = create_file_path_for_record(file_name, "videos")
+      driver.stop_and_save_recording_screen("#{recording_path[:recording_path]}.mp4")
+      aws_s3_path = AwsS3Helper.uploadS3(recording_path[:file_path], "#{recording_path[:file_name]}.mp4")
+      Allure.add_link(url:"#{aws_s3_path}", name:'Video Recording')
+    else
+      IGLoggers.log_info("The video recording was not saved. Environment parameter is turned off for recording.")
+    end
+  end
 end
